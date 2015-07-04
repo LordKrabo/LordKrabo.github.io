@@ -82,11 +82,22 @@ textarea {
    ========================================================================== */
 
 body {
-<<<<<<< HEAD
-  background: #4d4d54;
-=======
+	#background-color:rgb(109,104,104);
+	#background-image:url(http://www.zingerbugimages.com/backgrounds/black_and_white_flame_fractal_background_seamless.jpg);
+	#background-position:top left;
+	#background-repeat:repeat;
+	#background-attachment:fixed;
+
+  	
+  	background: #4d4d54;
+  	background-image:url(images/0253e33b.png);
 	font-family: arial;
-	background-color: rgb(109,104,104);}
+	background-color: rgb(109,104,104);
+	
+	#background:
+	#	no-repat 50% 
+	#	linear-gradient(top, #4d4d54 0%, #bcbcbc 100%);
+	}
 h1 {
 	color: rgb(109,104,104);
 	text-align: center;
@@ -98,6 +109,16 @@ h2 {
 	font-family: "Franklin Gothic Medium", Arial, sans-serif;
 	font-size: 50px;
 	line-height: 100px;}
+
+#footer {
+	font-size: 1.2em;
+	background-color: #f9f9f9;
+	border-top: 1px dotted #CCCCCC;
+	border-bottom: 1px dotted #CCCCCC;
+	text-align: center;
+	padding: 15px;
+	clear: both;
+}
 	
 form style="text-align_center"
 
