@@ -38,10 +38,27 @@ queryTrove = function(topic) {
   });
 }
 
-// action that occurs when the 'Search' button is clicked
+//*****************************************************************************
+// Show default topics
+//*****************************************************************************
+
+$(document).ready(function() {
+
+  var defaultTopics = ["death by lion", "muffin man"];
+
+  $.each(defaultTopics, function(key, topic){
+    console.log(topic);
+  });
+
+});
+
+//*****************************************************************************
+// Handle user input
+//*****************************************************************************
+
 $("#searchbutton").bind("click", function() {
-  if ($('#searchTerm').val().length) {
-    var topic = $('#searchTerm').val();
+  if ($('#topic').val().length) {
+    var topic = $('#topic').val();
   } else {
     var topic = defaultTopic;
   }
