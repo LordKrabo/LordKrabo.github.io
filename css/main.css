@@ -105,6 +105,7 @@ body {
     header input#userInput {
       color: #333;
       padding: 0.6em;
+      padding-right: 60px;
       font-size: 1.2em;
       background: #F2F2F2;
       border: 1px solid #333;
@@ -113,6 +114,21 @@ body {
     header input#userInput:active {
       background: white;
       border: 1px solid #000;
+    }
+    header button {
+      margin-left: -65px;
+      border-radius: 3px;
+      padding: 8px 20px;
+      text-align: center;
+      text-decoration: none;
+      color: white;
+      position: relative;
+      border: none;
+      background: #54cc60;
+    }
+    header button:hover {
+      background: #525252;
+      color: #FFEA68;
     }
 
   menu {
@@ -135,9 +151,11 @@ body {
       display: table-cell;
     }
     .year {
+      color: #d1d1d1;
       font-family: BigCaslon;
-      font-size: 1.2em;
-      width: 100px;
+      font-size: 1.4em;
+      vertical-align: middle;
+      width: 3em;
     }
     .snippet {
       font-family: Arial;

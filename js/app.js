@@ -36,9 +36,11 @@ queryTrove = function(topic, element) {
       $.each(sorted, function(key, value) {
         console.log(value.date);
 
+        var displayDate = new Date(value.date);
+
         $(element).append(
           "<li>" +
-            "<strong class='year'>" + value.date + "</strong>" +
+            "<strong class='year'>" + displayDate.getFullYear() + "</strong>" +
             "<p class='snippet'>" + value.snippet + "<p>" +
           "</li>"
         );
@@ -68,7 +70,7 @@ $("#search button").bind("click", function() {
   if ($('#userInput').val().length) {
     var topic = $('#userInput').val();
   } else {
-    var topic = "death AND by AND lion";
+    var topic = "death by lion";
   }
   queryTrove(topic, '#topic');
 });
