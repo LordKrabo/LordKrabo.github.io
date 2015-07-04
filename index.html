@@ -19,8 +19,61 @@
             <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
 
-        <!-- Add your site or application content here -->
-        <p>Hello world! This is HTML5 Boilerplate.</p>
+        <div class="container">
+            <h1 class="page-header">Trove API Search example</h1>
+
+            <div class="form-horizontal">
+              <div class="control-group">
+                <label class="control-label" for="apiKey">Trove API key</label>
+                <div class="controls">
+                  <input id="apiKey" type="text" />
+                  <span class="help-block">Enter your Trove API key here</span>
+                </div>
+              </div>
+
+              <div class="control-group">
+                <label class="control-label" for="searchTerm">Search Term</label>
+                <div class="controls">
+                  <input id="searchTerm" type="text" />
+                    <span class="help-block">See <a href="http://trove.nla.gov.au/general/api-technical#indexes" target="_blank">Trove API documentation</a> for supported facets</span>
+                </div>
+              </div>
+              <div class="control-group">
+                  <label class="control-label" for="searchZone">Zone</label>
+                  <div class="controls">
+                      <select id="searchZone">
+                      <option>book</option>
+                      <option>picture</option>
+                      <option>article</option>
+                      <option>music</option>
+                      <option>map</option>
+                      <option>collection</option>
+                      <option>newspaper</option>
+                      <option>list</option>
+                    </select>
+                  </div>
+              </div>
+                <div class="control-group">
+                  <label class="control-label" for="sortBy">Sort By</label>
+                  <div class="controls">
+                    <select id="sortBy">
+                      <option>dateasc</option>
+                      <option>datedesc</option>
+                      <option>relevance</option>
+                    </select>
+                  </div>
+              </div>
+              <div class="control-group">
+                <div class="controls">
+                 <button class="btn" id="searchbtn">Search</button>
+                </div>
+              </div>
+            </div>
+
+            <hr/>
+            <ul id="output"></ul>
+            <a href="http://trove.nla.gov.au/" target="_blank"><img alt="Powered by Trove" src="http://trove.nla.gov.au/general-test/files/2012/01/API-dark.png"/></a>
+        </div>
 
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.3.min.js"><\/script>')</script>
