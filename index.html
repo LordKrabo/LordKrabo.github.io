@@ -24,19 +24,10 @@
       <article>
         <h1 class="page-header">Past Events</h1>
 
-        <div class="form-horizontal">
-          <div class="control-group">
-            <label class="control-label" for="searchTerm">Search Term</label>
-            <div class="controls">
-              <input id="searchTerm" type="text" />
-                <span class="help-block">See <a href="http://trove.nla.gov.au/general/api-technical#indexes" target="_blank">Trove API documentation</a> for supported facets</span>
-            </div>
-          </div>
-
-          <div class="control-group">
-             <button id="searchbutton">Search</button>
-          </div>
-        </div>
+        <menu class="form-horizontal">
+          <input id="searchTerm" type="text" placeholder="Search for an event..."/>
+          <button id="searchbutton">Search</button>
+        </menu>
 
         <ul id="output">
         </ul>
