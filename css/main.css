@@ -2,9 +2,9 @@
    Base styles: opinionated defaults
    ========================================================================== */
 html {
-  color: #222;
-  font-size: 1em;
-  line-height: 1.4;
+ color: #222;
+ font-size: 1em;
+ line-height: 1.4;
 }
 /*
  * Remove text-shadow in selection highlight:
@@ -13,14 +13,15 @@ html {
  * These selection rule sets have to be separate.
  * Customize the background color to match your design.
  */
-::-moz-selection {
-  background: #b3d4fc;
-  text-shadow: none;
-}
-::selection {
-  background: #b3d4fc;
-  text-shadow: none;
-}
+/* ::-moz-selection {
+ * background: #b3d4fc;
+ * text-shadow: none;
+} */
+/* ::selection {
+ * background: #b3d4fc;
+ * text-shadow: none;
+} */
+
 
 /*
  * A better looking default horizontal rule
@@ -89,8 +90,8 @@ body {
 	#background-attachment:fixed;
 
   	
-  	background: #4d4d54;
-  	background-image:url(images/0253e33b.png);
+  	#background: #4d4d54;
+  	background-image:url("../images/0253e33b.png");
 	font-family: arial;
 	background-color: rgb(109,104,104);
 	
