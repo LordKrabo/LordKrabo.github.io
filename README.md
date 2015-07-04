@@ -7,7 +7,7 @@ Google Doc: https://docs.google.com/document/d/1tDLcLSWPdYXsjMtJrFBgG4mcN71Qbhk1
 git pull
 git commit -am "my change"
 git push
-git pull --rebase origin master
+git pull --rebase origin fun
 
 git fetch origin
 git branch --track my_branch orgin/my_branch
