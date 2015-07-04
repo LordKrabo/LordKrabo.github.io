@@ -81,11 +81,16 @@ textarea {
    Author's custom styles
    ========================================================================== */
 
+#wrap {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
 body {
   background: #4d4d54;
 }
-  header img {
-    height: 100px
+  header {
+    text-align: center;
   }
 
 /* ==========================================================================

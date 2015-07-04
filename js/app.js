@@ -1,25 +1,26 @@
-//var url = "http://api.trove.nla.gov.au/result?q=death%20AND%20by%20AND%20lion&zone=newspaper&encoding=json&callback=?";
-//var query = "death%20AND%20by%20AND%20lion&zone=newspaper&encoding=json&key=u944in30nism514v";
+//*****************************************************************************
+// Show default topics
+//*****************************************************************************
 
 // trove api
 var api = "http://api.trove.nla.gov.au/result?key=";
 var apiKey = "u944in30nism514v";
 
-// default input
-var defaultTopic = "death AND by AND lion";
-
-queryTrove = function(topic) {
+queryTrove = function(topic, element) {
   var url = api + apiKey + "&encoding=json&zone=newspaper&sortby=relevance&q=" + topic + "&callback=?";
 
   // Get the results as JSON and display
   $.getJSON(url, function(data) {
       console.log(data.response);
 
+      // clear existing list items
+      $(element).empty()
+
       // create topic and its events
       $.each(data.response.zone[0].records.article, function(key, value) {
         console.log(value.date);
 
-        $('#output').append(
+        $(element).append(
           "<li>" +
             "<h3>" + value.date + "<h3>" +
             "<p>" + value.snippet + "<p>" +
@@ -47,11 +48,11 @@ $(document).ready(function() {
 // Handle user input
 //*****************************************************************************
 
-$("#searchbutton").bind("click", function() {
-  if ($('#topic').val().length) {
-    var topic = $('#topic').val();
+$("#search button").bind("click", function() {
+  if ($('#userInput').val().length) {
+    var topic = $('#userInput').val();
   } else {
-    var topic = defaultTopic;
+    var topic = "death AND by AND lion";
   }
-  queryTrove(topic);
+  queryTrove(topic, '#topic');
 });
