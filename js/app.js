@@ -68,5 +68,13 @@ $("#search button").bind("click", function() {
   } else {
     var topic = "death by lion";
   }
+  $('#topic').html('Loading...');
+
   queryTrove(topic, '#topic');
+});
+
+$('#search input').keypress(function(ev) {
+  if (ev.which === 13) {
+    $('#search button').click();
+  }
 });

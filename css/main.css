@@ -160,6 +160,11 @@ body {
     .snippet {
       font-family: Arial;
       font-size: 0.9em;
+      text-align: left;
+    }
+
+    #topic {
+      text-align: center;
     }
 
 /* HEADINGS */
