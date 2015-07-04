@@ -9,20 +9,36 @@ var apiKey = "u944in30nism514v";
 queryTrove = function(topic, element) {
   var url = api + apiKey + "&encoding=json&zone=newspaper&sortby=relevance&q=" + topic + "&callback=?";
 
+  $('h1').html('"' + topic + '"');
+
+  //url = "json/death-by-lion.json";
+
   // Get the results as JSON and display
   $.getJSON(url, function(data) {
+      console.log(url);
       console.log(data.response);
+
+      var sorted = _.sortBy(data.response.zone[0].records.article, function(value) {
+        return value.date;
+      });
+
+      // find the average
+      date = new Date();
+      var firstDate = date.getTime(sorted[0].date);
+      var lastDate = date.getTime(sorted[sorted.length - 1]);
+      var average = firstDate - lastDate / sorted.length;
+      console.log(average);
 
       // clear existing list items
       $(element).empty()
 
       // create topic and its events
-      $.each(data.response.zone[0].records.article, function(key, value) {
+      $.each(sorted, function(key, value) {
         console.log(value.date);
 
         $(element).append(
           "<li>" +
-            "<strong class='year'>" + value.date + "<strong>" +
+            "<strong class='year'>" + value.date + "</strong>" +
             "<p class='snippet'>" + value.snippet + "<p>" +
           "</li>"
         );
