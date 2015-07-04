@@ -1,93 +1,59 @@
 <!doctype html>
 <html class="no-js" lang="">
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="x-ua-compatible" content="ie=edge">
-        <title></title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <link rel="apple-touch-icon" href="apple-touch-icon.png">
-        <!-- Place favicon.ico in the root directory -->
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <!-- Place favicon.ico in the root directory -->
 
-        <link rel="stylesheet" href="css/normalize.css">
-        <link rel="stylesheet" href="css/main.css">
-        <script src="js/vendor/modernizr-2.8.3.min.js"></script>
-    </head>
-    <body>
-        <!--[if lt IE 8]>
-            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-        <![endif]-->
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/main.css">
+    <script src="js/vendor/modernizr-2.8.3.min.js"></script>
+  </head>
+  <body>
 
-        <div class="container">
-            <h1 class="page-header">Trove API Search example</h1>
+    <div class="wrap">
+      <header>
+        <a href="">History Repeats</a>
+      </header>
 
-            <div class="form-horizontal">
-              <div class="control-group">
-                <label class="control-label" for="apiKey">Trove API key</label>
-                <div class="controls">
-                  <input id="apiKey" type="text" />
-                  <span class="help-block">Enter your Trove API key here</span>
-                </div>
-              </div>
+      <article>
+        <h1 class="page-header">Past Events</h1>
 
-              <div class="control-group">
-                <label class="control-label" for="searchTerm">Search Term</label>
-                <div class="controls">
-                  <input id="searchTerm" type="text" />
-                    <span class="help-block">See <a href="http://trove.nla.gov.au/general/api-technical#indexes" target="_blank">Trove API documentation</a> for supported facets</span>
-                </div>
-              </div>
-              <div class="control-group">
-                  <label class="control-label" for="searchZone">Zone</label>
-                  <div class="controls">
-                      <select id="searchZone">
-                      <option>book</option>
-                      <option>picture</option>
-                      <option>article</option>
-                      <option>music</option>
-                      <option>map</option>
-                      <option>collection</option>
-                      <option>newspaper</option>
-                      <option>list</option>
-                    </select>
-                  </div>
-              </div>
-                <div class="control-group">
-                  <label class="control-label" for="sortBy">Sort By</label>
-                  <div class="controls">
-                    <select id="sortBy">
-                      <option>dateasc</option>
-                      <option>datedesc</option>
-                      <option>relevance</option>
-                    </select>
-                  </div>
-              </div>
-              <div class="control-group">
-                <div class="controls">
-                 <button class="btn" id="searchbtn">Search</button>
-                </div>
-              </div>
+        <div class="form-horizontal">
+          <div class="control-group">
+            <label class="control-label" for="searchTerm">Search Term</label>
+            <div class="controls">
+              <input id="searchTerm" type="text" />
+                <span class="help-block">See <a href="http://trove.nla.gov.au/general/api-technical#indexes" target="_blank">Trove API documentation</a> for supported facets</span>
             </div>
+          </div>
 
-            <hr/>
-            <ul id="output"></ul>
-            <a href="http://trove.nla.gov.au/" target="_blank"><img alt="Powered by Trove" src="http://trove.nla.gov.au/general-test/files/2012/01/API-dark.png"/></a>
+          <div class="control-group">
+            <div class="controls">
+             <button class="btn" id="searchbutton">Search</button>
+            </div>
+          </div>
         </div>
 
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.3.min.js"><\/script>')</script>
-        <script src="js/plugins.js"></script>
-        <script src="js/main.js"></script>
+        <ul id="output">
+        </ul>
 
-        <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
-        <script>
-            (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
-            function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
-            e=o.createElement(i);r=o.getElementsByTagName(i)[0];
-            e.src='https://www.google-analytics.com/analytics.js';
-            r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
-            ga('create','UA-XXXXX-X','auto');ga('send','pageview');
-        </script>
-    </body>
+      </article>
+
+      <footer>
+        <a href="http://trove.nla.gov.au/"><img alt="Powered by Trove" src="http://trove.nla.gov.au/general-test/files/2012/01/API-dark.png"/></a>
+      </footer>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.3.min.js"><\/script>')</script>
+    <script src="js/plugins.js"></script>
+    <script src="js/main.js"></script>
+
+  </body>
 </html>

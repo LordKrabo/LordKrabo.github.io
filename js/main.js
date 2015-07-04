@@ -1,20 +1,16 @@
 //var url = "http://api.trove.nla.gov.au/result?q=death%20AND%20by%20AND%20lion&zone=newspaper&encoding=json&callback=?";
 //var query = "death%20AND%20by%20AND%20lion&zone=newspaper&encoding=json&key=u944in30nism514v";
 
-var api = "http://api.trove.nla.gov.au/result?key=";
-var apiKey = "u944in30nism514v";
-var searchZone = 'newspaper';
+// user input
 var searchTerm = "death AND by AND lion";
 
+// trove api
+var api = "http://api.trove.nla.gov.au/result?key=";
+var apiKey = "u944in30nism514v";
+var url = api + apiKey + "&encoding=json&zone=newspaper&sortby=relevance&q=" + searchTerm + "&callback=?";
+
 // action that occurs when the 'Search' button is clicked
-$("#searchbtn").bind("click", function() {
-
-    // Get the values from our search form
-    //var searchZone = $("#searchZone").val();
-    var sortBy = $("#sortBy").val();
-
-    // Construct the URL for the Trove Search API
-    var url = api + apiKey + "&encoding=json&zone=" + searchZone + "&q=" + searchTerm + "&callback=?";
+$("#searchbutton").bind("click", function() {
 
     // Get the results as JSON and display
     $.getJSON(url, function(data) {

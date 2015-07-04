@@ -9,6 +9,9 @@ git commit -am "my change"
 git push
 git pull --rebase origin master
 
+git fetch github
+git branch --track my_branch github/my_branch
+
 ## Workflow
 
 1. User inputs keywords
