@@ -22,8 +22,8 @@ queryTrove = function(topic, element) {
 
         $(element).append(
           "<li>" +
-            "<h3>" + value.date + "<h3>" +
-            "<p>" + value.snippet + "<p>" +
+            "<strong class='year'>" + value.date + "<strong>" +
+            "<p class='snippet'>" + value.snippet + "<p>" +
           "</li>"
         );
       });

@@ -81,6 +81,13 @@ textarea {
    Author's custom styles
    ========================================================================== */
 
+@font-face {
+  font-family: 'BigCaslon';
+  src: url('BigCaslon.ttf');
+}
+
+/* LAYOUT */
+
 #wrap {
   max-width: 900px;
   margin: 0 auto;
@@ -88,10 +95,24 @@ textarea {
 
 body {
   background: #4d4d54;
+  font-family: Arial;
 }
   header {
     text-align: center;
   }
+
+  li {
+
+  }
+    .year {
+      font-family: BigCaslon;
+    }
+
+/* HEADINGS */
+
+h1, h2, h3 {
+
+}
 
 /* ==========================================================================
    EXAMPLE Media Queries for Responsive Design.
