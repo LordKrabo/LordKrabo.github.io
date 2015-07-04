@@ -18,17 +18,11 @@ $("#searchbutton").bind("click", function() {
 
         //var displayJSON = function( index, item ) {
 
-        //    $('#output').append("<li>" + (index + 1) + ". "
-        //      // display link to record
-        //      +"<a target='_blank' href='" + item.troveUrl +"'>"
-        //      + (item.title.value || item.title || item.name)
-        //      + "</a><br/>"
-
-        //      // display JSON response (formatted)
-        //      + "<pre>" + JSON.stringify(item,null,4) + "</pre>"
-        //      + "</li>");
-
-        //};
+        $('#output').append(
+          "<li>" + (index + 1) + ". " +
+          JSON.stringify(item, null, 4) +
+          "</li>"
+        );
         //$('#output').empty();
         //if (data.response.zone[0].records.work){
         //    $.each(data.response.zone[0].records.work, displayJSON);
