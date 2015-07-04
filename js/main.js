@@ -15,26 +15,17 @@ queryTrove = function(topic) {
   $.getJSON(url, function(data) {
       console.log(data.response);
 
-      // create topic
+      // create topic and its events
+      $.each(data.response.zone[0].records.article, function(key, value) {
+        console.log(value.date);
 
-      // create events
-
-
-      //var displayJSON = function( index, item ) {
-
-      $('#output').append(
-        "<li>" + ". " +
-        JSON.stringify(item, null, 4) +
-        "</li>"
-      );
-      //$('#output').empty();
-      //if (data.response.zone[0].records.work){
-      //    $.each(data.response.zone[0].records.work, displayJSON);
-      //} else if (data.response.zone[0].records.article){
-      //    $.each(data.response.zone[0].records.article, displayJSON);
-      //} else if (data.response.zone[0].records.list){
-      //    $.each(data.response.zone[0].records.list, displayJSON);
-      //}
+        $('#output').append(
+          "<li>" +
+            "<h3>" + value.date + "<h3>" +
+            "<p>" + value.snippet + "<p>" +
+          "</li>"
+        );
+      });
   });
 }
 
