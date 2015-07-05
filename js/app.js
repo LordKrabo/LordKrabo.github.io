@@ -14,14 +14,22 @@ queryTrove = function(topic, element) {
       console.log(url);
       console.log(data.response);
 
+      // sort by year
       var sorted = _.sortBy(data.response.zone[0].records.article, function(value) {
         return value.date;
       });
 
+      // unique by year
+      var uniques = _.map(_.groupBy(sorted,function(doc) {
+        return new Date(doc.date).getFullYear();
+      }),function(grouped) {
+      	return grouped[0];
+      });
+
       // find the average
-      var firstDate = new Date(sorted[0].date).getFullYear();
-      var lastDate = new Date(sorted[sorted.length - 1].date).getFullYear();
-      var average = (lastDate - firstDate) / sorted.length;
+      var firstDate = new Date(uniques[0].date).getFullYear();
+      var lastDate = new Date(uniques[uniques.length - 1].date).getFullYear();
+      var average = (lastDate - firstDate) / uniques.length;
 
       $('#history-repeats').html('History repeats itself on average every ' + average + ' years');
 
@@ -29,7 +37,7 @@ queryTrove = function(topic, element) {
       $(element).empty()
 
       // create topic and its events
-      $.each(sorted, function(key, value) {
+      $.each(uniques, function(key, value) {
         console.log(value.date);
 
         var displayDate = new Date(value.date);
@@ -50,7 +58,9 @@ queryTrove = function(topic, element) {
 
 $(document).ready(function() {
 
-  var defaultTopics = ["death by lion", "muffin man"];
+  console.log("I suggest...");
+
+  var defaultTopics = ["death by lion", "man public naked", "death by aeroplane", "heart attack", "man eats muffin"];
 
   $.each(defaultTopics, function(key, topic){
     console.log(topic);
