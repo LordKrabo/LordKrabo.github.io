@@ -31,7 +31,7 @@ queryTrove = function(topic, element) {
       var lastDate = new Date(uniques[uniques.length - 1].date).getFullYear();
       var average = (lastDate - firstDate) / uniques.length;
 
-      $('#history-repeats').html('History repeats itself on average every ' + average + ' years');
+      $('#history-repeats').html('History repeats itself on average every ' + parseFloat(average).toFixed(2) + ' years');
 
       // clear existing list items
       $(element).empty()
