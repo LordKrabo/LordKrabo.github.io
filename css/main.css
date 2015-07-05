@@ -81,12 +81,102 @@ textarea {
    Author's custom styles
    ========================================================================== */
 
+@font-face {
+  font-family: 'BigCaslon';
+  src: url('BigCaslon.ttf');
+}
+
+/* LAYOUT */
+
+#wrap {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
 body {
   background: #4d4d54;
+  color: white;
+  font-family: Arial;
 }
-  header img {
-    height: 100px
+  header {
+    padding-top: 40px;
+    text-align: center;
   }
+    header input#userInput {
+      color: #333;
+      padding: 0.6em;
+      padding-right: 60px;
+      font-size: 1.2em;
+      background: #F2F2F2;
+      border: 1px solid #333;
+      border-radius: 3px;
+    }
+    header input#userInput:active {
+      background: white;
+      border: 1px solid #000;
+    }
+    header button {
+      margin-left: -65px;
+      border-radius: 3px;
+      padding: 8px 20px;
+      text-align: center;
+      text-decoration: none;
+      color: white;
+      position: relative;
+      border: none;
+      background: #54cc60;
+    }
+    header button:hover {
+      background: #525252;
+      color: #FFEA68;
+    }
+
+  menu {
+    padding-left: 0;
+  }
+
+  article ul {
+    margin-left: 0;
+    padding-left: 0;
+  }
+  article ul li {
+    list-style: none;
+    display: table;
+    width: 100%;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #666;
+    margin-bottom: 10px;
+  }
+    .year,
+    .snippet {
+      display: table-cell;
+    }
+    .year {
+      color: #d1d1d1;
+      font-family: BigCaslon;
+      font-size: 1.4em;
+      vertical-align: middle;
+      width: 3em;
+    }
+    .snippet {
+      font-family: Arial;
+      font-size: 0.9em;
+      text-align: left;
+    }
+
+    #topic {
+      text-align: center;
+    }
+
+/* HEADINGS */
+
+h1, h2, h3 {
+
+}
+h2 {
+  text-align: center;
+  display: block;
+}
 
 /* ==========================================================================
    EXAMPLE Media Queries for Responsive Design.
